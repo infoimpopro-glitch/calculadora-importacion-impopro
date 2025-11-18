@@ -1,0 +1,5 @@
+{
+  "name": "Copy of Copy of Calculadora de Impuestos de Importación Chile",
+  "description": "Una aplicación para estimar los impuestos de importación en Chile para un producto específico, sugiriendo el código HS más probable y calculando los aranceles e IVA según la normativa chilena.",
+  "requestFramePermissions": []
+}

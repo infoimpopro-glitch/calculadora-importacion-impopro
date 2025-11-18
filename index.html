@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora Impuestos Importación Chile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --principal: #5B38ED;
+            --bg: #f5f6fa;
+            --card-bg: #ffffff;
+            --borde: #e1e1e1;
+            --texto: #2f3640;
+            --texto-secundario: #57606f;
+            --sombra: 0 4px 18px rgba(0,0,0,0.08);
+            --radio: 14px;
+        }
+        body {
+            background: var(--bg);
+            font-family: "Inter", sans-serif;
+            color: var(--texto);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: var(--radio);
+            box-shadow: var(--sombra);
+            margin-bottom: 25px;
+            border: 1px solid var(--borde);
+        }
+
+        .card h2, .card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--texto);
+            font-weight: 700;
+            border-left: 4px solid var(--principal);
+            padding-left: 12px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 14px;
+            border-radius: 10px;
+            border: 1px solid #dcdcdc;
+            margin-top: 8px;
+            font-size: 15px;
+            background: #fafafa;
+            transition: border-color 0.2s;
+            color: var(--texto);
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--principal);
+            box-shadow: 0 0 0 2px rgba(91, 56, 237, 0.3);
+        }
+        
+        label {
+            font-weight: 600;
+            color: var(--texto-secundario);
+            font-size: 14px;
+        }
+        
+        .btn-principal {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            padding: 14px;
+            background: var(--principal);
+            color: #FFFFFF;
+            font-weight: 700;
+            font-size: 16px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-principal:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(91, 56, 237, 0.3);
+        }
+        .btn-principal:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
